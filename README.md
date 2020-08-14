@@ -1,5 +1,5 @@
 
-# Prediction of Cardiac Indices and Incident Myocardial Infarction using Retinal Image and Demographic Data from the UK Biobank
+# Looking at your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data
 
 This is the project web for the study titled "Looking at your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". This is study was submitted to the journal Nature Machine Intelligence in August 2020.
 
@@ -31,7 +31,7 @@ We used the UK Biobank dataset [Web](https://www.ukbiobank.ac.uk/) (application 
 
 ## -Notes:
 
-1. The weights of the trained model (~2GB) could be download from [OneDrive](http://proceedings.mlr.press/v97/antelmi19a/antelmi19a.pdf).
+1. The weights of the trained model (~1.5GB) could be download from [OneDrive](http://www.cistib.org/).
 2. There are several dataloaders that were used to train and test the system with retinal images, cardiac MR and bot image modalities.
 3.
 
@@ -41,7 +41,7 @@ We used the UK Biobank dataset [Web](https://www.ukbiobank.ac.uk/) (application 
 
 Please cite the following paper if you use this code:
 
-[1] Diaz-Pinto A, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Gale C P, Gale R P, Plein S and Frangi A F. "Looking at your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". Submitted to Nature Machine Intelligence. August 2020. [[PDF]](https://arxiv.org/abs/1907.05345)
+[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Gale C P, Gale R P, Plein S and Frangi A F. "Looking at your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". Submitted to Nature Machine Intelligence. August 2020. [[PDF]](http://www.cistib.org/)
 
 
 
