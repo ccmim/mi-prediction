@@ -23,7 +23,7 @@ Retinal images are routinely obtained in ophthalmologic practice to aid diagnosi
 
 ## Proposed Method:
 
-We used the UK Biobank dataset [Web](https://www.ukbiobank.ac.uk/) (application # 11350 [web](https://www.ukbiobank.ac.uk/wp-content/uploads/2019/02/11350-Professor-Alejandro-Frangi.pdf)) to train and validate the proposed method. Our method is based on the work published in ICML by Antelmi et al. [PDF](http://proceedings.mlr.press/v97/antelmi19a/antelmi19a.pdf).
+We used the UK Biobank dataset [UKB](https://www.ukbiobank.ac.uk/) (application # 11350 [PDF](https://www.ukbiobank.ac.uk/wp-content/uploads/2019/02/11350-Professor-Alejandro-Frangi.pdf)) to train and validate the proposed method. Our method is based on the work published in ICML by Antelmi et al. [PDF](http://proceedings.mlr.press/v97/antelmi19a/antelmi19a.pdf).
 
 **Schema of the proposed method:** This system is composed of two main components, a multi-channel VAE and a deep regressor network. During Stage I, a joint latent space is created with two channels: Retinal and cardiac MR. Then, during Stage II a deep regressor is trained on the reconstructed CMR plus demographic data to estimate LVM and LVEDV. **Demographic data:** Summary of the subjects metadata used in this study to train (5097 participants) and test (566 participants) the proposed method. All continuous values are reported in mean and standard deviation (in parenthesis)  while categorical data are reported in percentage.
 
