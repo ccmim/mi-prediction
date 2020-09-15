@@ -43,8 +43,7 @@ We used the UK Biobank dataset [Web](https://www.ukbiobank.ac.uk/) (application 
 - [mcvae](./mcvae): Multi-channel VAE model.
 - [networks](./networks): Networks used as encoder and decoder in the mcVAE
 - [statistical_analysis](./statistical_analysis): Jupyter Notebook used to perform the myocardial infarction predcition based on the cardiac indices and demographic data.
-- [csvPreparation ](./
-csvPreparation ): Scripts used to prepare input csv files (This bit is based on the UK Biobank data). 
+- [csvPreparation](./csvPreparation): Scripts used to prepare input csv files (This bit is based on the UK Biobank data). 
 
 
 ----------------
