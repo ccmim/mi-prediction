@@ -203,7 +203,7 @@ if __name__ == "__main__":
     parser.add_argument('--lr', type=float, default=5e-4)
     parser.add_argument('--epochs', default=100, type=int)
     parser.add_argument('--batch_size', default=8, type=int)
-    parser.add_argument('--dir_dataset', type=str, default='../MMF-Net/input_data/')
+    parser.add_argument('--dir_dataset', type=str, default='./input_data/')
     parser.add_argument('--dir_ids', type=str, default='./input_data/ids/ROIS_LVM_LVEDV_MTDT.csv')
     parser.add_argument('--percentage', type=float, default=0.90)
     parser.add_argument('--n_classes', type=int, default=2)

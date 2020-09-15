@@ -25,7 +25,7 @@ if __name__ == "__main__":
     parser.add_argument('--save_model', default=200, type=int) # save the model every x epochs
     parser.add_argument('--batch_size', default=8, type=int)
     parser.add_argument('--n_cpu', default=24, type=int)
-    parser.add_argument('--dir_dataset', type=str, default='../MMF-Net/input_data/')
+    parser.add_argument('--dir_dataset', type=str, default='../input_data/')
     parser.add_argument('--dir_ids', type=str, default='./input_data/ids/non_stroke_MI_ids_mtdt.csv') # non_stroke_MI_ids_mtdt # ids_MI_4_test_mtdt
     parser.add_argument('--sax_img_size', type=list, default=[128, 128, 15])
     parser.add_argument('--fundus_img_size', type=int, default=128)
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     parser.add_argument('--n_classes', type=int, default=2)
     parser.add_argument('--ndf', type=int, default=128)
     parser.add_argument('--dir_results', type=str, default='./results_test/')
-    parser.add_argument('--dir_weights_mcvae', type=str, default='./results/2020-05-10_19-44-26_automatic_600Epochs_reducedList/')
+    parser.add_argument('--dir_weights_mcvae', type=str, default='./results/2020-05-10_19-44-26_automatic/')
     parser.add_argument('--dir_weights_regressor', type=str, default='results_regressor/2020-05-12_00-28-28/')
     parser.add_argument('--model_name', type=str, default='net_cmr_mtdt')  # for deep regressor
     args = parser.parse_args()

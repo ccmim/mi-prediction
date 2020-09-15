@@ -23,8 +23,8 @@ if __name__ == "__main__":
     parser.add_argument('--save_model', default=200, type=int) # save the model every x epochs
     parser.add_argument('--batch_size', default=8, type=int)
     parser.add_argument('--n_cpu', default=24, type=int)
-    parser.add_argument('--dir_dataset', type=str, default='../MMF-Net/input_data/')
-    parser.add_argument('--dir_ids', type=str, default='./input_data/ids/manual_LVM_LVEDV_mtdt_reduced.csv')
+    parser.add_argument('--dir_dataset', type=str, default='./input_data/')
+    parser.add_argument('--dir_ids', type=str, default='./input_data/ids/manual_LVM_LVEDV_mtdt.csv')
     parser.add_argument('--sax_img_size', type=list, default=[128, 128, 15])
     parser.add_argument('--fundus_img_size', type=int, default=128)
     parser.add_argument('--ndf', type=int, default=128)
