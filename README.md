@@ -67,19 +67,26 @@ The weights of the trained models (~10GB) could be download from [OneDrive](http
 
 ## Installation Guide
 
-Users should first create the Python virtual environment and then install all the libraries listed in **requirements.txt** file. This will take about 10 mins to install.
+### Testing
+
+Users should first create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to install.
 
 Secondly, users should download the weights inside the main folder.
 
 
-Finally, users may want to use the script **mcVAE_4_test.py** to test on new retinal images.
+Finally, users should run the script **mcVAE_4_test.py** to test on new retinal images. For testing, users may want to use the UK Biobank dataset or other publicly available datasets such as [HRF](https://www5.cs.fau.de/research/data/fundus-images/)
 
 
-### Notes
+### Training
 
-2. Scripts **main_mcVAE.py**, **mcVAE_4_test.py** were used to train and test the Multi-channel VAE, respectively.
+For training the system, users should load the cardiac MR, retinal images and demographic data inside the "./input_data" folder. Then, run the script "main_mcVAE.py" to train the mcVAE. 
+
+
+### General Notes
+
+1. Scripts **main_mcVAE.py**, **mcVAE_4_test.py** were used to train and test the Multi-channel VAE, respectively. (Stage I)
+2. Script **main_deep_regressor.py** was used to train the Stage II. 
 3. Scripts **main_only_fundus.py** and **main_only_mtdt.py** were used to analyse contribuntion made by retinal and demographic data respectively.
-4. Script **main_deep_regressor.py** was used to train the Stage II. 
 
 
 
