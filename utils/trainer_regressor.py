@@ -18,6 +18,40 @@ def train_step(train_loader, model, epoch, optimizer, criterion, scheduler, args
 
     for step, (_, recon_cmr, sax, labels, mtdt, img_names) in enumerate(train_loader):
 
+        # for n in range(2):
+        #
+        #     if n == 0: # Train with sax
+        #
+        #         start_time = time.time()
+        #
+        #         torch.set_grad_enabled(True)
+        #
+        #         mtdt = mtdt.cuda()
+        #         sax = sax.cuda()
+        #         labels = labels.cuda()
+        #
+        #         out_cmr = model(sax, mtdt)
+        #
+        #         # print('\n This is out_cmr {} and labels {} '.format(str(out_cmr.cpu().detach().numpy()[0]), str(labels.cpu().detach().numpy()[0])))
+        #
+        #         lossValue = criterion(out_cmr, labels)
+        #
+        #         optimizer.zero_grad()
+        #         lossValue.backward()
+        #         optimizer.step()
+        #         scheduler.step() #  You should step scheduler after optimizer
+        #
+        #         # measure elapsed time
+        #         epoch_loss += lossValue.item()
+        #         end_time = time.time()
+        #         batch_time = end_time - start_time
+        #
+        #         # plot progress
+        #         bar_str = '{} / {} | Time: {batch_time:.2f} mins | Error per batch: {loss:.4f} '
+        #         bar.suffix = bar_str.format(step+1, iters_per_epoch, batch_time = batch_time*(iters_per_epoch-step)/60, loss = lossValue.item())
+        #
+        #     else: # train with recon_cmr
+
         start_time = time.time()
 
         torch.set_grad_enabled(True)

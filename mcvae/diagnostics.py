@@ -6,7 +6,7 @@ import itertools
 import copy
 import utils.io.image as io_func
 from utils.sitk_np import np_to_sitk
-from dataloader.MM_loader import MM_loader
+# from dataloader.MM_loader import MM_loader
 import torch # for normalising images. See save_img_sample function
 from torchvision.utils import save_image
 
@@ -342,40 +342,40 @@ def plot_weights(model, side='decoder', title='', xlabel='', comp=None, save_fig
 
 
 
-def save_img_sample(model, path_plot, opt):
-
-	print('Saving sample images ...')
-
-	true_epochs = len(model.loss['total']) - 1
-
-	train_set = pd.read_csv(opt.dir_results + 'train_set.csv', sep=',')
-
-	train_loader = MM_loader(batch_size = opt.batch_size,
-	                           fundus_img_size = opt.fundus_img_size,
-	                			num_workers = opt.n_cpu,
-	                            sax_img_size = opt.sax_img_size,
-	    			            shuffle = True,
-	    			            dir_imgs = opt.dir_dataset,
-								args = opt,
-	                            ids_set = train_set
-	    			            )
-
-	iterator_loader = iter(train_loader)
-	fundus, sax, _, img_names = next(iterator_loader)
-
-	fundus = fundus.cuda()
-	sax = sax.cuda()
-
-	# Sampling from the model
-	inputToLatent = model.encode((fundus, sax))
-	latent_vars = model.sample_from(inputToLatent)
-	predictions = model.decode(latent_vars)
-
-	# saving the images
-	img_retina = predictions[0][0].loc[0]
-	n = min(fundus.size(0), 8)
-	comparison = torch.cat([fundus[:n], predictions[0][0].loc[:n]])
-	save_image(comparison.cpu(), path_plot + 'fundus_{}_epochs_'.format(true_epochs) + '.png', nrow=n)
-	# img_retina = (img_retina - torch.min(img_retina))/(torch.max(img_retina) - torch.min(img_retina))
-	save_image(img_retina, path_plot + 'one_fundus_{}_epochs_'.format(true_epochs) + img_names[0]  + '.png')
-	io_func.write(np_to_sitk(predictions[1][1].loc.cpu().detach().numpy()[0]), path_plot + 'sax_{}_epochs_'.format(true_epochs) + img_names[0]  + '.nii.gz')
+# def save_img_sample(model, path_plot, opt):
+#
+# 	print('Saving sample images ...')
+#
+# 	true_epochs = len(model.loss['total']) - 1
+#
+# 	train_set = pd.read_csv(opt.dir_results + 'train_set.csv', sep=',')
+#
+# 	train_loader = MM_loader(batch_size = opt.batch_size,
+# 	                           fundus_img_size = opt.fundus_img_size,
+# 	                			num_workers = opt.n_cpu,
+# 	                            sax_img_size = opt.sax_img_size,
+# 	    			            shuffle = True,
+# 	    			            dir_imgs = opt.dir_dataset,
+# 								args = opt,
+# 	                            ids_set = train_set
+# 	    			            )
+#
+# 	iterator_loader = iter(train_loader)
+# 	fundus, sax, _, img_names = next(iterator_loader)
+#
+# 	fundus = fundus.cuda()
+# 	sax = sax.cuda()
+#
+# 	# Sampling from the model
+# 	inputToLatent = model.encode((fundus, sax))
+# 	latent_vars = model.sample_from(inputToLatent)
+# 	predictions = model.decode(latent_vars)
+#
+# 	# saving the images
+# 	img_retina = predictions[0][0].loc[0]
+# 	n = min(fundus.size(0), 8)
+# 	comparison = torch.cat([fundus[:n], predictions[0][0].loc[:n]])
+# 	save_image(comparison.cpu(), path_plot + 'fundus_{}_epochs_'.format(true_epochs) + '.png', nrow=n)
+# 	# img_retina = (img_retina - torch.min(img_retina))/(torch.max(img_retina) - torch.min(img_retina))
+# 	save_image(img_retina, path_plot + 'one_fundus_{}_epochs_'.format(true_epochs) + img_names[0]  + '.png')
+# 	io_func.write(np_to_sitk(predictions[1][1].loc.cpu().detach().numpy()[0]), path_plot + 'sax_{}_epochs_'.format(true_epochs) + img_names[0]  + '.nii.gz')

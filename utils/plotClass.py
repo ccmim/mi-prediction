@@ -19,7 +19,8 @@ class plot_results(object):
         # load gt
         self.all_gt = pd.read_csv(self.dir_gt)
 
-        self.all_gt = self.all_gt[['ID', 'LVEDV_automatic', 'LVM_automatic']] # For automatic
+        # self.all_gt = self.all_gt[['ID', 'LVEDV_automatic', 'LVM_automatic']] # For automatic
+        self.all_gt = self.all_gt[['ID', 'LVEDV', 'LVM']]
 
         # if 'automatic' in self.all_gt.columns[1]:
         #     self.all_gt = self.all_gt[['ID', 'LVEDV_automatic', 'LVM_automatic']] # For automatic
@@ -69,6 +70,14 @@ class plot_results(object):
         ax.set_xlabel('Mean', fontsize=15)
         ax.set_ylabel('Difference [Predicted - GT]', fontsize=15)
         ax.set_title("Bland-Altman Plot - " + filename.split('/')[-1].split('_')[-3], fontsize=15)
+
+        if 'LVEDV' in filename.split('/')[-1].split('_')[-3]:
+            plt.xlim(50, 250)
+            plt.ylim(-150, 150)
+        else:  # for LVM
+            plt.xlim(50, 150)
+            plt.ylim(-150, 150)
+
         ax.grid()
         ax.legend()
 
