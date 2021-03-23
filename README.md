@@ -36,7 +36,7 @@ We used Python 3.6.5. File **requirements.txt** contains the list of python libr
 
 ### Weights
 
-The weights of the trained models (~5GB) could be download from [OneDrive](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=0d0d0H).
+The weights of the trained models (~5GB) could be download from this [link](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=0d0d0H).
 
 
 ## Installation Guide
@@ -44,27 +44,30 @@ The weights of the trained models (~5GB) could be download from [OneDrive](https
 ### Testing
 
 
-As the first step, please create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to finish.
+- As the first step, please create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to finish.
 
-Then, modify the dataloader file ('dataloader/MM_loader_4_test_EXTERNAL.py') according to the data organization you have. Additionally, create the input file (.csv file) following the example located in './input_data_EXTERNAL/ids/ids_metadata_EXTERNAL.csv'. 
+- Secondly, modify the dataloader file ('dataloader/MM_loader_4_test_EXTERNAL.py') according to the data organization you have. Then, create the input file (.csv file) following the example located in './input_data_EXTERNAL/ids/ids_metadata_EXTERNAL.csv'. 
 
-For this toy example, I used a small part (100 images) of the DR Kaggle dataset and I randomly draw metadata values for each subject:
+- For this toy example, I used a small part (100 images) of the DR Kaggle dataset and I randomly draw metadata values for each subject:
 
 ID,sex,dbpa,sbpa,ss,ads,bmi,age,hba1c,chol,glucose
+
 1020_left.jpeg,0,84.97,82.54,,1,41.64,14,43.82,8.89,7.17
+
 1020_right.jpeg,0,90.29,197.24,,2,44.79,67,14.54,8.38,8.92
 
 
-You can use the script 'test_dataLoader_MM_4_test_EXTERNAL.py' to test your dataloader.
+You can use the script **test_dataLoader_MM_4_test_EXTERNAL.py** to test your dataloader.
 
 
-As a first contact, I upload the weights of a system trained with the following metadat: gender ('sex'), smoking status ('ss'), drinking status ('ads'), body mass index ('bmi'), age ('age'), hba1c, diastolic blood pressure ('dbpa'), systolic blood pressure ('sbpa'), cholesterol ('chol') and glucose ('glucose').
+I uploaded the weights of a system trained with the following metadat: gender ('sex'), smoking status ('ss'), drinking status ('ads'), body mass index ('bmi'), age ('age'), hba1c, diastolic blood pressure ('dbpa'), systolic blood pressure ('sbpa'), cholesterol ('chol') and glucose ('glucose').
 
 
-Secondly, you should download the weights inside the main folder in a folder called 'results' [Weights](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=0d0d0H).
+- Thirdly, you should download the [weights](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=0d0d0H) inside the main folder in a folder called 'results'.
 
 
-Finally, you should run the script **main_EXTERNAL.py** to test on the retinal images.
+- Finally, you should run the script **main_EXTERNAL.py** to test on the retinal images.
+
 
 
 If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/issues) or send us an email to andres.diaz-pinto@kcl.ac.uk
