@@ -83,7 +83,7 @@ if __name__ == "__main__":
     print('\n --- Loading IDs files \n')
 
     # Reading the files that contains labels and names.
-    test_set = pd.read_csv(args.dir_ids, sep=',') 
+    test_set = pd.read_csv(args.dir_ids, sep=',')
 
     test_loader = MM_loader(batch_size=args.batch_size,
                             fundus_img_size=args.fundus_img_size,

@@ -30,19 +30,13 @@ The weights of the trained models (~5GB) could be download from this [link](http
 
 - Secondly, modify the dataloader file ('dataloader/MM_loader_4_test_EXTERNAL.py') according to the data organization you have. Then, create the input file (.csv file) following the example located in './input_data_EXTERNAL/ids/ids_metadata_EXTERNAL.csv'. 
 
-- For this toy example, I used a small part (100 images) of the DR Kaggle dataset and I randomly draw metadata values for each subject:
-
-ID,sex,dbpa,sbpa,ss,ads,bmi,age,hba1c,chol,glucose
-
-1020_left.jpeg,0,84.97,82.54,,1,41.64,14,43.82,8.89,7.17
-
-1020_right.jpeg,0,90.29,197.24,,2,44.79,67,14.54,8.38,8.92
+- For this toy example, I used a small part (100 images) of the DR Kaggle dataset and I randomly draw metadata values for each subject: ID,sex,dbpa,sbpa,ss,ads,bmi,age,hba1c,chol,glucose
 
 
 You can use the script **test_dataLoader_MM_4_test_EXTERNAL.py** to test your dataloader.
 
 
-I uploaded the weights of a system trained with the following metadat: gender ('sex'), smoking status ('ss'), drinking status ('ads'), body mass index ('bmi'), age ('age'), hba1c, diastolic blood pressure ('dbpa'), systolic blood pressure ('sbpa'), cholesterol ('chol') and glucose ('glucose').
+I uploaded the weights of a system trained with the following metadat: gender ('sex'), [smoking status](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=20116) ('ss'), [drinking status](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=1558) ('ads'), body mass index ('bmi'), age ('age'), [hba1c](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=30750), diastolic blood pressure ('dbpa'), systolic blood pressure ('sbpa'), [cholesterol](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=23400) ('chol') and glucose ('glucose').
 
 
 - Thirdly, you should download the [weights](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=0d0d0H) inside the main folder in a folder called 'results'.
