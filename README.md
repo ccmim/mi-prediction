@@ -4,22 +4,6 @@
 This is the project web for the study titled "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". This is study is under review in the journal Nature Machine Intelligence.
 
 
-## Contents
-
-- [Repo Contents](#repo-contents)
-- [System Requirements](#system-requirements)
-- [Installation Guide](#installation-guide)
-- [Citation](#citation)
-
-
-## Repo Contents
-
-This branch was created to validate our method on an external database.
-
-- [dataloader](./dataloader): All dataloaders used in this study. Dataloaders to train and test the system with retinal images, cardiac MR and both image modalities.
-- [mcvae](./mcvae): Multi-channel VAE model.
-- [networks](./networks): Networks used as encoder and decoder in the mcVAE
-
 ----------------
 
 ## System Requirements:
@@ -39,9 +23,7 @@ We used Python 3.6.5. File **requirements.txt** contains the list of python libr
 The weights of the trained models (~5GB) could be download from this [link](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=0d0d0H).
 
 
-## Installation Guide
-
-### Testing
+## Steps for external validation
 
 
 - As the first step, please create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to finish.
@@ -73,15 +55,6 @@ I uploaded the weights of a system trained with the following metadat: gender ('
 If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/issues) or send us an email to andres.diaz-pinto@kcl.ac.uk
 
  
-----------------
-## Citation:
-
-Please cite the following paper if you use this code:
-
-[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Gale C P, Gale R P, Plein S and Frangi A F. "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". Nature Machine Intelligence. Under review. September 2020. [[PDF]](http://www.cistib.org/)
-
-
-
 ----------------
 
 Update log (Year.Month.Day):
