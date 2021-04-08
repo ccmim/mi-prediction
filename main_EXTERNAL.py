@@ -37,14 +37,15 @@ def MI_prediciton(image_names, args):
     model_name = args.dir_weights_mcvae + 'best_linear_model.sav'
     # load the model from disk
     loaded_model = pickle.load(open(model_name, 'rb'))
-    predicted_y = loaded_model.predict(test_set)
+    predicted_y = loaded_model.predict_proba(test_set)
     print('MI predictions: ', predicted_y)
     print('Number of predictions: ', len(predicted_y))
     # Saving the MI predictions
     print('\n -- Saving the MI predictions in results_test folder')
     result = {}
     result['ID'] = image_names
-    result['MI_pred'] = [int(p) for p in predicted_y]
+    result['MI_pred0'] = [round(p[0], 4) for p in predicted_y]
+    result['MI_pred1'] = [round(p[1], 4) for p in predicted_y]
     out_df = pd.DataFrame(result)
     out_df.to_csv('./results_test/MI_preds.csv', index=False)
     ## Evaluating model on EXTERNAL dataset

@@ -20,7 +20,7 @@ We used Python 3.6.5. File **requirements.txt** contains the list of python libr
 
 ### Weights
 
-The weights of the trained models (~5GB) could be download from this [link](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=xISEB1).
+The weights of the trained models (~5GB) could be download from this [link](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=NtNTzW).
 
 
 ### Metadata coding
@@ -57,7 +57,7 @@ You can use the script **test_dataLoader_MM_4_test_EXTERNAL.py** to test your da
 I uploaded the weights of a system trained with the following metadata: gender ('sex'), [smoking status](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=20116) ('ss'), [drinking status](https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=1558) ('ads'), body mass index ('bmi'), age ('age'), and diastolic blood pressure ('dbpa'), systolic blood pressure ('sbpa').
 
 
-- Thirdly, you should download the [weights](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=xISEB1) inside a folder called 'results'. This means, the weights should be located inside **MI_pred_mcvae_ukbb/results/**
+- Thirdly, you should download the [weights](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=NtNTzW) inside a folder called 'results'. This means, the weights should be located inside **MI_pred_mcvae_ukbb/results/**
 
 
 - Finally, you should run the script **main_EXTERNAL.py** to test on the retinal images.
