@@ -32,9 +32,13 @@ For 'ss' (smoking status) and 'ads' alcohol drinker status:
 - 1 Previous
 - 2 Current
 
+
 bmi (body mass index) -> kg/m2
+
 dbpa (diastolic blood pressure) -> mmHg
+
 sbpa (systolic blood pressure) -> mmHg
+
 sex -> 0 for Female and 1 for Male
 
 ## Steps for external validation
