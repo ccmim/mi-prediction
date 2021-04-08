@@ -51,7 +51,7 @@ class MM(data.Dataset):
 
         scaler = MinMaxScaler()
         # scaler = RobustScaler()
-        mtdt_dataframe = ids_set[['sex', 'dbpa', 'sbpa', 'ss', 'ads', 'bmi', 'age', 'hba1c', 'chol', 'glucose']]
+        mtdt_dataframe = ids_set[['sex', 'dbpa', 'sbpa', 'ss', 'ads', 'bmi', 'age']]
         # mtdt_dataframe = ids_set[['sex', 'ss', 'bmi', 'age']]
         mtdt_scaled = pd.DataFrame(scaler.fit_transform(mtdt_dataframe), columns=mtdt_dataframe.columns)
 
@@ -65,8 +65,7 @@ class MM(data.Dataset):
             self.img_names.append(ID[0].split('.')[0])
 
             self.mtdt.append([mtdt_scaled['sex'][idx], mtdt_scaled['dbpa'][idx], mtdt_scaled['sbpa'][idx], mtdt_scaled['ss'][idx],
-                              mtdt_scaled['ads'][idx], mtdt_scaled['bmi'][idx], mtdt_scaled['age'][idx], mtdt_scaled['hba1c'][idx],
-                              mtdt_scaled['chol'][idx], mtdt_scaled['glucose'][idx]
+                              mtdt_scaled['ads'][idx], mtdt_scaled['bmi'][idx], mtdt_scaled['age'][idx]
                               ])
             # self.mtdt.append([mtdt_scaled['sex'][idx], mtdt_scaled['ss'][idx], mtdt_scaled['bmi'][idx], mtdt_scaled['age'][idx]])
 

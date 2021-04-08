@@ -17,7 +17,7 @@ from utils.trainer_regressor import save_output
 from sklearn.preprocessing import RobustScaler
 
 
-def MI_prediciton(args):
+def MI_prediciton(image_names, args):
 
     # Reading LVM and LVEDV predictions
     lvm_lvedv_preds = pd.read_csv(args.dir_results + 'ids_metadata_EXTERNAL_preds.csv')
@@ -29,7 +29,7 @@ def MI_prediciton(args):
     # Removing image extension from ID column
     # mtdt_test_set['ID'] = mtdt_test_set.ID.apply(lambda x: x.split('.')[0])
     # Concatenating predictions and metadata
-    test_set = pd.concat([lvm_lvedv_preds[['LVEDV', 'LVM']], mtdt_test_set[['sex', 'dbpa', 'sbpa', 'ss', 'ads', 'bmi', 'age', 'hba1c', 'chol', 'glucose']]], axis=1)
+    test_set = pd.concat([lvm_lvedv_preds[['LVEDV', 'LVM']], mtdt_test_set[['sex', 'dbpa', 'sbpa', 'ss', 'ads', 'bmi', 'age']]], axis=1)
     # Rescaling inputs
     scaler = RobustScaler()
     test_set = scaler.fit_transform(test_set)
@@ -40,6 +40,13 @@ def MI_prediciton(args):
     predicted_y = loaded_model.predict(test_set)
     print('MI predictions: ', predicted_y)
     print('Number of predictions: ', len(predicted_y))
+    # Saving the MI predictions
+    print('\n -- Saving the MI predictions in results_test folder')
+    result = {}
+    result['ID'] = image_names
+    result['MI_pred'] = [int(p) for p in predicted_y]
+    out_df = pd.DataFrame(result)
+    out_df.to_csv('./results_test/MI_preds.csv', index=False)
     ## Evaluating model on EXTERNAL dataset
     # result = loaded_model.score(test_set, test_set_labels)
     # print('Evaluation result: ', result)
@@ -58,12 +65,12 @@ if __name__ == "__main__":
     parser.add_argument('--dir_ids', type=str, default='./input_data_EXTERNAL/ids/ids_metadata_EXTERNAL.csv')
     parser.add_argument('--sax_img_size', type=list, default=[128, 128, 15])
     parser.add_argument('--fundus_img_size', type=int, default=128)
-    parser.add_argument('--num_mtdt', type=int, default=10) # ['sex', 'dbpa', 'sbpa', 'ss', 'ads', 'bmi', 'age', 'hba1c', 'chol', 'glucose']
+    parser.add_argument('--num_mtdt', type=int, default=7) # ['sex', 'dbpa', 'sbpa', 'ss', 'ads', 'bmi', 'age']
     parser.add_argument('--n_classes', type=int, default=2) # CMR and Fundus
     parser.add_argument('--ndf', type=int, default=128)
     parser.add_argument('--dir_results', type=str, default='./results_test/')
-    parser.add_argument('--dir_weights_mcvae', type=str, default='./results/2020-05-10_03-23-23_manual_1000Epochs_reducedList/')
-    parser.add_argument('--dir_weights_regressor', type=str, default='results_regressor/2020-05-12_00-28-46/')
+    parser.add_argument('--dir_weights_mcvae', type=str, default='./results/2020-05-13_17-42-01_automatic_1800Epochs_reducedList/')
+    parser.add_argument('--dir_weights_regressor', type=str, default='results_regressor/2021-04-06_19-36-20_for_EXTERNAL/')
     parser.add_argument('--model_name', type=str, default='net_cmr_mtdt')  # for deep regressor
     args = parser.parse_args()
 
@@ -145,4 +152,4 @@ if __name__ == "__main__":
 
     print('\n --- Performing inference for MI using estimated LVEDV and LVM ...')
     # Performing Myocardial Prediction
-    MI_prediciton(args)
+    MI_prediciton(image_names, args)
