@@ -62,7 +62,7 @@ We used Python 3.6.5. File **requirements.txt** contains the list of python libr
 
 ### Weights
 
-The weights of the trained models (~10GB) could be download from [OneDrive](https://leeds365-my.sharepoint.com/:f:/g/personal/scsad_leeds_ac_uk/EqL0iAuwIXFNt32KGADyv0EBStdbTXdVW8s5I5K1LY90aA?e=2fdChW).
+The weights of the trained models (~5GB) could be download from this [link](https://emckclac-my.sharepoint.com/:f:/g/personal/k2039747_kcl_ac_uk/EqjWo8c37A1LvuVGJcF9XhwBoh5d-7Sy-vPsewBaA3jkeQ?e=NtNTzW).
 
 
 ## Installation Guide
@@ -99,7 +99,7 @@ If you are having an issue that you believe to be tied to software versioning is
 
 Please cite the following paper if you use this code:
 
-[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Gale C P, Gale R P, Plein S and Frangi A F. "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". Nature Machine Intelligence. Under review. September 2020. [[PDF]](http://www.cistib.org/)
+[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Gale C P, Gale R P, Plein S and Frangi A F. "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". Nature Machine Intelligence. Under review. April 2021.
 
 
 
