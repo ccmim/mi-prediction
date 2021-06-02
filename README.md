@@ -1,7 +1,7 @@
 
-# Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data
+# Predicting Myocardial Infarction Looking at your Eyes
 
-This is the project web for the study titled "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". This is study is under review in the journal Nature Machine Intelligence.
+This is the project web for the study titled "Predicting Myocardial Infarction Looking at your Eyes". This study is under review in the journal Nature Machine Intelligence.
 
 
 ----------------
@@ -44,7 +44,7 @@ sex -> 0 for Female and 1 for Male
 ## Steps for external validation
 
 
-- As the first step, please create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to finish.
+- As the first step, users have two options: (1) create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to install. (2) Use the Docker recipe to create a Docker container.
 
 - Secondly, modify the dataloader file ('dataloader/MM_loader_4_test_EXTERNAL.py') according to the data organization you have. Then, create the input file (.csv file) following the example located in './input_data_EXTERNAL/ids/ids_metadata_EXTERNAL.csv'. 
 
@@ -66,7 +66,7 @@ I uploaded the weights of a system trained with the following metadata: gender (
 
 
 
-If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/issues) or send us an email to andres.diaz-pinto@kcl.ac.uk
+If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/issues).
 
  
 ----------------
@@ -75,6 +75,7 @@ Update log (Year.Month.Day):
 
 - 20.08.14: Code released.
 - 20.09.15: Network weights uploaded. Article under review.
-- 21.22.03: Creaated a branch for external validation
+- 21.22.03: Created a branch for external validation
 - 21.08.04: Updated weights and main file for 7 metadata variables - External validation
+- 21.02.06: Upload all scripts used to address reviewers comments
 
