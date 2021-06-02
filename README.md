@@ -1,7 +1,7 @@
 
-# Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data
+# Predicting Myocardial Infarction Looking at your Eyes
 
-This is the project web for the study titled "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". This is study is under review in the journal Nature Machine Intelligence.
+This is the project web for the study titled "Predicting Myocardial Infarction Looking at your Eyes". This study is under review in the journal Nature Machine Intelligence.
 
 
 ## Contents
@@ -17,13 +17,15 @@ This is the project web for the study titled "Seeing your Heart through your Eye
 
 ## Abstract:
 
-Retinal images are routinely obtained in ophthalmologic practice to aid diagnosis and monitoring of both primary eye diseases and systemic conditions affecting the eye, such as diabetic retinopathy. Recent studies have shown that biomarkers on retinal images, e.g., retinal blood vessels density or tortuosity, are associated with cardiac function and may be used to identify patients at risk of coronary artery disease. In this work, we investigate the use of retinal images together with relevant patient metadata, to estimate left ventricular mass (LVM) and left ventricular end-diastolic volume (LVEDV), and subsequently, predict incident myocardial infarction. Retinal images, cardiac magnetic resonance (CMR) images and demographic data from **5663** participants in the UK Biobank cohort were used to train and validate a multi-channel variational autoencoder (mcVAE). Once trained, we were able to estimate LVM (4.4 (-32.30, 41.1) g) and LVEDV (3.02 (-53.45, 59.49) ml) based on the retinal images and demographic data. Prediction of individual risk of myocardial infarction (**AUC=0.80+/-0.02**) was performed on data for participants with only retinal images and demographic data that were not used to train our proposed method. Here we show that during routine retinal imaging, patients at high risk of future left ventricular hypertrophy and myocardial infarction could be identified.
+
+Retinal images are routinely obtained in ophthalmologic practice to aid diagnosis and monitoring of both primary eye diseases and systemic conditions affecting the eye, such as diabetic retinopathy. Recent studies have shown that biomarkers on retinal images, e.g. retinal blood vessels density or tortuosity, are associated with cardiac function and may be used to identify patients at risk of coronary artery disease. In this work, we investigate the use of retinal images together with relevant patient metadata, to estimate left ventricular mass (LVM) and left ventricular end-diastolic volume (LVEDV), and subsequently, predict incident myocardial infarction. Retinal images, cardiac magnetic resonance (CMR) images and demographic data from **5,663** participants in the UK Biobank cohort were used to train and validate a multi-channel variational autoencoder (mcVAE). Once trained, LVM (4.4 (-32.30, 41.1) g) and LVEDV (3.02 (-53.45, 59.49) ml) were estimated using just the retinal images and demographic data. Here, the first value represents the bias and the other two represent the limits of agreement (LoA), for the predicted values. Risk of myocardial infarction was predicted (**AUC=0.80+/-0.02, Sensitivity=0.76+/-0.02, Specificity=0.73+/-0.05**) using only retinal images and demographic data, in UK Biobank participants not included during training. Additionally, we validated our method on an external dataset, namely, AREDS, obtaining an **AUC of 0.70, Sensitivity 0.70, and Specificity: 0.67**. This demonstrates the robustness of our method to predict myocardial infarction based on retinal images and demographic data. Our results indicate that routine retinal imaging could be used to identify patients at high-risk of future left ventricular hypertrophy and myocardial infarction.
+
 
 ----------------
 
 ## Proposed Method:
 
-We used the UK Biobank dataset [UKB](https://www.ukbiobank.ac.uk/) (application # 11350 [PDF](https://www.ukbiobank.ac.uk/wp-content/uploads/2019/02/11350-Professor-Alejandro-Frangi.pdf)) to train and validate the proposed method. Our method is based on the work published in ICML by Antelmi et al. [PDF](http://proceedings.mlr.press/v97/antelmi19a/antelmi19a.pdf).
+We used the UK Biobank dataset [UKB](https://www.ukbiobank.ac.uk/) (application # 11350 [PDF](https://www.ukbiobank.ac.uk/wp-content/uploads/2019/02/11350-Professor-Alejandro-Frangi.pdf)) to train and validate the proposed method. Our method is based on the work published in ICML by Antelmi et al. [PDF](http://proceedings.mlr.press/v97/antelmi19a/antelmi19a.pdf). External validation was performed on AREDS dataset.
 
 **Schema of the proposed method:** This system is composed of two main components, a multi-channel VAE and a deep regressor network. During Stage I, a joint latent space is created with two channels: Retinal and cardiac MR. Then, during Stage II a deep regressor is trained on the reconstructed CMR plus demographic data to estimate LVM and LVEDV. **Demographic data:** Summary of the subjects metadata used in this study to train (5097 participants) and test (566 participants) the proposed method. All continuous values are reported in mean and standard deviation (in parenthesis)  while categorical data are reported in percentage.
 
@@ -69,12 +71,13 @@ The weights of the trained models (~5GB) could be download from this [link](http
 
 ### Testing
 
-Users should first create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to install.
+Users have two options: (1) create a Python virtual environment and then install all the libraries listed in **requirements.txt** file using the command "pip install -r requirements.txt". This will take about 10 mins to install. (2) Use the Docker recipe to create a Docker container.
+
 
 Secondly, users should download the weights inside the main folder.
 
 
-Finally, users should run the script **mcVAE_4_test.py** to test on new retinal images. For testing, users may want to use the UK Biobank dataset or other publicly available datasets such as [HRF](https://www5.cs.fau.de/research/data/fundus-images/)
+Finally, users should run the script **mcVAE_4_test.py** to test on new retinal images. For testing, users may want to use the UK Biobank dataset or other publicly available datasets such as [HRF](https://lme.tf.fau.de/dataset/gold-standard-database-for-evaluation-of-fundus-image-segmentation-algorithms/)
 
 
 ### Training
@@ -87,7 +90,7 @@ For training the system, users should load the cardiac MR, retinal images and de
 1. Scripts **main_mcVAE.py**, **mcVAE_4_test.py** were used to train and test the Multi-channel VAE, respectively. (Stage I)
 2. Script **main_deep_regressor.py** was used to train the Stage II. 
 3. Scripts **main_only_fundus.py** and **main_only_mtdt.py** were used to analyse contribuntion made by retinal and demographic data respectively.
-
+4. All scripts used to address reviewers comments are available in the branch [externalValidation](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/tree/externalValidation)
 
 
 If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/issues). 
@@ -99,7 +102,7 @@ If you are having an issue that you believe to be tied to software versioning is
 
 Please cite the following paper if you use this code:
 
-[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Gale C P, Gale R P, Plein S and Frangi A F. "Seeing your Heart through your Eyes: Predicting Myocardial Infarction using Retinal Images and Demographic Data". Nature Machine Intelligence. Under review. April 2021.
+[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Chen Q, Keenan T D L, Agrón E, Chew E Y, Lu Z, Gale C P, Gale R P, Plein S and Frangi A F. "Predicting Myocardial Infarction Looking at your Eyes". Nature Machine Intelligence. Under review. June 2021.
 
 
 
@@ -109,4 +112,5 @@ Update log:
 
 - 20.08.14: Code released.
 - 20.09.15: Network weights uploaded. Article under review.
+- 21.06.02: Update Abstract and Readme file
 
