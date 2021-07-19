@@ -1,7 +1,7 @@
 
-# Predicting Myocardial Infarction Looking at your Eyes
+# Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data
 
-This is the project web for the study titled "Predicting Myocardial Infarction Looking at your Eyes". This study is under review in the journal Nature Machine Intelligence.
+This is the project web for the study titled "Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data". This study is under review in the journal Nature Machine Intelligence.
 
 
 ## Contents
@@ -18,8 +18,7 @@ This is the project web for the study titled "Predicting Myocardial Infarction L
 ## Abstract:
 
 
-Retinal images are routinely obtained in ophthalmologic practice to aid diagnosis and monitoring of both primary eye diseases and systemic conditions affecting the eye, such as diabetic retinopathy. Recent studies have shown that biomarkers on retinal images, e.g. retinal blood vessels density or tortuosity, are associated with cardiac function and may be used to identify patients at risk of coronary artery disease. In this work, we investigate the use of retinal images together with relevant patient metadata, to estimate left ventricular mass (LVM) and left ventricular end-diastolic volume (LVEDV), and subsequently, predict incident myocardial infarction. Retinal images, cardiac magnetic resonance (CMR) images and demographic data from **5,663** participants in the UK Biobank cohort were used to train and validate a multi-channel variational autoencoder (mcVAE). Once trained, LVM (4.4 (-32.30, 41.1) g) and LVEDV (3.02 (-53.45, 59.49) ml) were estimated using just the retinal images and demographic data. Here, the first value represents the bias and the other two represent the limits of agreement (LoA), for the predicted values. Risk of myocardial infarction was predicted (**AUC=0.80+/-0.02, Sensitivity=0.76+/-0.02, Specificity=0.73+/-0.05**) using only retinal images and demographic data, in UK Biobank participants not included during training. Additionally, we validated our method on an external dataset, namely, AREDS, obtaining an **AUC of 0.70, Sensitivity 0.70, and Specificity: 0.67**. This demonstrates the robustness of our method to predict myocardial infarction based on retinal images and demographic data. Our results indicate that routine retinal imaging could be used to identify patients at high-risk of future left ventricular hypertrophy and myocardial infarction.
-
+Retinal images are routinely obtained in ophthalmologic practice to aid diagnosis and monitoring of both primary eye diseases and systemic conditions affecting the eye, such as diabetic retinopathy. Recent studies have shown that biomarkers on retinal images, e.g. retinal blood vessels density or tortuosity, are associated with cardiac function and may be used to identify patients at risk of coronary artery disease. In this work, we investigate the use of retinal images together with relevant patient metadata, to estimate left ventricular mass (LVM) and left ventricular end-diastolic volume (LVEDV), and subsequently, predict incident myocardial infarction. We trained a multi-channel variational autoencoder (mcVAE) and a deep regressor model to estimate LVM (4.4 (-32.30, 41.1) g) and LVEDV (3.02 (-53.45, 59.49) ml) and predict risk of myocardial infarction (AUC=0.80+/-0.02, Sensitivity=0.76+/-0.02, Specificity=0.73+/-0.05) using just the retinal images and demographic data. Our results indicate that routine retinal imaging could be used to identify patients at high-risk of future myocardial infarction.
 
 ----------------
 
@@ -102,7 +101,7 @@ If you are having an issue that you believe to be tied to software versioning is
 
 Please cite the following paper if you use this code:
 
-[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Chen Q, Keenan T D L, Agrón E, Chew E Y, Lu Z, Gale C P, Gale R P, Plein S and Frangi A F. "Predicting Myocardial Infarction Looking at your Eyes". Nature Machine Intelligence. Under review. June 2021.
+[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Chen Q, Keenan T D L, Agrón E, Chew E Y, Lu Z, Gale C P, Gale R P, Plein S and Frangi A F. "Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data". Nature Machine Intelligence. Under review. July 2021.
 
 
 
@@ -112,5 +111,6 @@ Update log:
 
 - 20.08.14: Code released.
 - 20.09.15: Network weights uploaded. Article under review.
-- 21.02.06: Update Abstract and Readme file
+- 21.06.02: Update Abstract and Readme file
+- 21.07.19: Update title and abstract for second review
 
