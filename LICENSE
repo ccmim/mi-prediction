@@ -1,22 +1,42 @@
-MIT License
+SOFTWARE LICENSE AGREEMENT
 
-Copyright (c) 2021 CISTIB Centre for Computational Imaging and Simulation
-Technologies in Biomedicine, University of Leeds
+Software "MI_prediction_retina_mcVAE" © University of Leeds (2018-2021), all rights reserved, hereinafter "the Software".
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This Software has been developed by researchers of CISTIB of University of Leeds.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+School of Computing
+University of Leeds, 
+Woodhouse Lane, 
+Leeds LS2 9JT, 
+United Kingdom
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The University of Leeds holds all the ownership rights on the Software.
+
+The Software is still being currently developed.
+The University of Leeds aims for the Software to be used by the scientific community to test it and evaluate it so that the University of Leeds may improve it.
+
+For these reasons, the University of Leeds has decided to distribute the Software via GitHub server. 
+
+University of Leeds grants to the academic user, free of charge, without the right to sublicense non-exclusive right to use the Software for research purposes for one (1) year from the date of the download of the source code. Any other use without the prior consent of the University of Leeds is prohibited.
+
+The academic user explicitly acknowledges having received from the University of Leeds all information allowing her/him to appreciate the adequacy between the Software and her/his needs and undertake all necessary precautions for its execution and use.
+
+The Software is provided only as a source file.
+
+In case of using the Software for a publication or other results obtained through the use of the Software, user should cite the Software as follows:
+
+@Article{DiazPinto2021,
+  author               = {Diaz-Pinto, A and Attar, R and Ravikumar, N and Suinesiaputra, A and Zhao, Y and Levelt, E and {Dall'Armellina}, E and Lorenzi, M and Chen, Q and Keenan, T D L and {Agr\'{o}n}, E and Chew, E Y and Lu, Z and Gale, C P and Gale, R P and Plein, S and Frangi, A F},
+  title                = {Predicting Infarction through your Retinal Scans and Basic Demographics},
+  journal              = {Nat Machine Intel.},
+  year     			   = {2021},
+  pubstate             = {In press}
+}
+
+Every user of the Software could communicate to the developers at the following addresses [a.frangi@leeds.ac.uk] his or her remarks about the use of the Software.
+
+THE USER CANNOT USE, EXPLOIT OR COMMERCIALLY DISTRIBUTE THE SOFTWARE WITHOUT PRIOR AND EXPLICIT CONSENT OF UNIVERSITY OF LEEDS (commercialisation@leeds.ac.uk). ANY SUCH ACTION WILL CONSTITUTE A FORGERY.
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTIES OF ANY NATURE AND ANY EXPRESS OR IMPLIED WARRANTIES,WITH REGARDS TO COMMERCIAL USE, PROFESSIONAL USE, LEGAL OR NOT, OR OTHER, OR COMMERCIALISATION OR ADAPTATION. 
+
+UNLESS EXPLICITLY PROVIDED BY LAW, IN NO EVENT, SHALL UNIVERSITY OF LEEDS OR THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, LOSS OF USE, DATA, OR PROFITS OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
