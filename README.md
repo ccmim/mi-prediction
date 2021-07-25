@@ -1,7 +1,7 @@
 
-# Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data
+# Predicting Infarction through your Retinal Scans and Basic Demographics
 
-This is the project web for the study titled "Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data". This study is under review in the journal Nature Machine Intelligence.
+This is the project web for the study titled "Predicting Infarction through your Retinal Scans and Basic Demographics". This study is under review in the journal Nature Machine Intelligence.
 
 
 ## Contents
@@ -17,8 +17,7 @@ This is the project web for the study titled "Seeing your Heart through your Eye
 
 ## Abstract:
 
-
-Retinal images are routinely obtained in ophthalmologic practice to aid diagnosis and monitoring of both primary eye diseases and systemic conditions affecting the eye, such as diabetic retinopathy. Recent studies have shown that biomarkers on retinal images, e.g. retinal blood vessels density or tortuosity, are associated with cardiac function and may be used to identify patients at risk of coronary artery disease. In this work, we investigate the use of retinal images together with relevant patient metadata, to estimate left ventricular mass (LVM) and left ventricular end-diastolic volume (LVEDV), and subsequently, predict incident myocardial infarction. We trained a multi-channel variational autoencoder (mcVAE) and a deep regressor model to estimate LVM (4.4 (-32.30, 41.1) g) and LVEDV (3.02 (-53.45, 59.49) ml) and predict risk of myocardial infarction (AUC=0.80+/-0.02, Sensitivity=0.76+/-0.02, Specificity=0.73+/-0.05) using just the retinal images and demographic data. Our results indicate that routine retinal imaging could be used to identify patients at high-risk of future myocardial infarction.
+Retinal images are routinely obtained in ophthalmologic practice to aid diagnosis and monitoring of both primary eye diseases and systemic conditions affecting the eye, such as diabetic retinopathy. Recent studies have shown that biomarkers on retinal images, e.g. retinal blood vessels density or tortuosity, are associated with cardiac function and may be used to identify patients at risk of coronary artery disease. In this work, we investigate the use of retinal images alongside relevant patient metadata, to estimate left ventricular mass (LVM) and left ventricular end-diastolic volume (LVEDV), and subsequently, predict incident myocardial infarction. We trained a multi-channel variational autoencoder (mcVAE) and a deep regressor model to estimate LVM (4.4 (-32.30, 41.1) g) and LVEDV (3.02 (-53.45, 59.49) ml) and predict risk of myocardial infarction (AUC=0.80+/-0.02, Sensitivity=0.76+/-0.02, Specificity=0.73+/-0.05) using just the retinal images and demographic data. Our results indicate that one could identify patients at high risk of future myocardial infarction from retinal imaging available in every optician and eye clinic.
 
 ----------------
 
