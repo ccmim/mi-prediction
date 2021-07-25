@@ -1,7 +1,7 @@
 
-# Predicting Myocardial Infarction Looking at your Eyes
+# Predicting Infarction through your Retinal Scans and Basic Demographics
 
-This is the project web for the study titled "Predicting Myocardial Infarction Looking at your Eyes". This study is under review in the journal Nature Machine Intelligence.
+This is the project web for the study titled "Predicting Infarction through your Retinal Scans and Basic Demographics". This study is under review in the journal Nature Machine Intelligence.
 
 
 ----------------
