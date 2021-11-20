@@ -27,7 +27,7 @@ In case of using the Software for a publication or other results obtained throug
 
 @Article{DiazPinto2021,
   author               = {Diaz-Pinto, A and Attar, R and Ravikumar, N and Suinesiaputra, A and Zhao, Y and Levelt, E and {Dall'Armellina}, E and Lorenzi, M and Chen, Q and Keenan, T D L and {Agr\'{o}n}, E and Chew, E Y and Lu, Z and Gale, C P and Gale, R P and Plein, S and Frangi, A F},
-  title                = {Predicting Infarction through your Retinal Scans and Basic Demographics},
+  title                = {Predicting Infarction through Retinal Scans and Basic Demographics},
   journal              = {Nat Machine Intel.},
   year     			   = {2021},
   pubstate             = {In press}
