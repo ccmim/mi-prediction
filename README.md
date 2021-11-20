@@ -1,7 +1,7 @@
 
-# Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data
+# Predicting Myocardial Infarction through Retinal Scans and Minimal Personal Information
 
-This is the project web for the study titled "Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data". This study is under review in the journal Nature Machine Intelligence.
+This is the project web for the study titled "Predicting Myocardial Infarction through Retinal Scans and Minimal Personal Information". This study is accepted for publication in Nature Machine Intelligence.
 
 
 ## Contents
@@ -89,10 +89,10 @@ For training the system, users should load the cardiac MR, retinal images and de
 1. Scripts **main_mcVAE.py**, **mcVAE_4_test.py** were used to train and test the Multi-channel VAE, respectively. (Stage I)
 2. Script **main_deep_regressor.py** was used to train the Stage II. 
 3. Scripts **main_only_fundus.py** and **main_only_mtdt.py** were used to analyse contribuntion made by retinal and demographic data respectively.
-4. All scripts used to address reviewers comments are available in the branch [externalValidation](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/tree/externalValidation)
+4. All scripts used to address reviewers comments are available in the branch [externalValidation](https://github.com/cistib/MI_prediction_retina_mcVAE/tree/externalValidation)
 
 
-If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/diazandr3s/MI_pred_mcvae_ukbb/issues). 
+If you are having an issue that you believe to be tied to software versioning issues, please drop us an [Issue](https://github.com/cistib/MI_prediction_retina_mcVAE/issues). 
 
 
  
@@ -101,7 +101,7 @@ If you are having an issue that you believe to be tied to software versioning is
 
 Please cite the following paper if you use this code:
 
-[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Chen Q, Keenan T D L, Agrón E, Chew E Y, Lu Z, Gale C P, Gale R P, Plein S and Frangi A F. "Seeing your Heart through your Eyes by Predicting Myocardial Infarction using Retinal Images and Demographic Data". Nature Machine Intelligence. Under review. July 2021.
+[1] **Diaz-Pinto A**, Attar R, Ravikumar N, Suinesiaputra A, Zhao Y, Levelt E, Dall'Armellina E, Lorenzi M, Chen Q, Keenan T D L, Agrón E, Chew E Y, Lu Z, Gale C P, Gale R P, Plein S and Frangi A F. "Predicting Myocardial Infarction through Retinal Scans and Minimal Personal Information". Nature Machine Intelligence. Under review. July 2021.
 
 
 
